@@ -99,7 +99,7 @@ async function main() {
   while (!finished) {
     await wait(200);
     if (await buyback.isOpenned()) {
-      const tx = await buyback.selllab(labBalanceRaw, { gasPrice: 1e10 });
+      const tx = await buyback.selllab(labBalanceRaw, { gasPrice: 1e11 });
       tx.wait();
       finished = true;
     } else console.log("Not opened");
